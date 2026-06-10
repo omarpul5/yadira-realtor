@@ -13,9 +13,8 @@ export default function AdminPanel() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [images, setImages] = useState<string[]>([]);
   
-  // Estado completo del formulario
   const [formData, setFormData] = useState({
-    title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: ""
+    title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: "", description: ""
   });
 
   const loadProperties = async () => {
@@ -33,11 +32,12 @@ export default function AdminPanel() {
       price: formData.price,
       location: formData.location,
       image: formData.image,
-      images: images, // Galería completa
+      images: images,
       beds: formData.beds,
       baths: formData.baths,
       Pies2: formData.Pies2,
-      type: formData.type
+      type: formData.type,
+      description: formData.description
     };
 
     if (editingId) {
@@ -50,8 +50,7 @@ export default function AdminPanel() {
     }
     
     alert("¡Guardado correctamente!");
-    // Limpiamos todo al terminar
-    setFormData({ title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: "" });
+    setFormData({ title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: "", description: "" });
     setImages([]);
     loadProperties();
   };
@@ -66,7 +65,8 @@ export default function AdminPanel() {
       beds: p.beds,
       baths: p.baths,
       Pies2: p.Pies2,
-      type: p.type
+      type: p.type,
+      description: p.description || ""
     });
     setImages(p.images || []);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -103,6 +103,13 @@ export default function AdminPanel() {
         <ImageUploader onUploadComplete={(urls) => setImages(prev => [...prev, ...urls])} />
         {images.length > 0 && <p className="text-sm text-green-600 font-bold">{images.length} fotos listas.</p>}
 
+        <textarea 
+          placeholder="Descripción detallada de la propiedad..." 
+          value={formData.description} 
+          onChange={e => setFormData({...formData, description: e.target.value})} 
+          className="border p-3 rounded-lg w-full h-32"
+        />
+
         <input placeholder="Pies2" value={formData.Pies2} onChange={e => setFormData({...formData, Pies2: e.target.value})} className="border p-3 rounded-lg" />
         <input placeholder="Habitaciones" value={formData.beds} onChange={e => setFormData({...formData, beds: e.target.value})} className="border p-3 rounded-lg" />
         <input placeholder="Baños" value={formData.baths} onChange={e => setFormData({...formData, baths: e.target.value})} className="border p-3 rounded-lg" />
@@ -115,14 +122,19 @@ export default function AdminPanel() {
         </select>
         
         <button className="bg-blue-600 text-white p-3 rounded-lg font-bold">GUARDAR</button>
-        {editingId && <button type="button" onClick={() => {setEditingId(null); setFormData({title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: ""}); setImages([])}} className="text-gray-500 underline">Cancelar edición</button>}
+        {editingId && <button type="button" onClick={() => {setEditingId(null); setFormData({title: "", price: "", location: "", image: "", beds: "", baths: "", Pies2: "", type: "", description: ""}); setImages([])}} className="text-gray-500 underline">Cancelar edición</button>}
       </form>
 
       <div className="border-t pt-8">
         <h2 className="text-2xl font-bold mb-6">Propiedades actuales</h2>
         {properties.map((p) => (
           <div key={p.id} className="bg-white p-6 mb-6 rounded-xl border border-gray-200 shadow-md flex gap-4 items-center">
-            <img src={p.image} className="w-24 h-24 object-cover rounded-lg" />
+            {/* CORRECCIÓN: Se usa lógica de respaldo para evitar error de string vacío */}
+            <img 
+              src={p.image || (p.images && p.images.length > 0 ? p.images[0] : "/placeholder.png")} 
+              className="w-24 h-24 object-cover rounded-lg" 
+              onError={(e) => (e.currentTarget.src = "/placeholder.png")}
+            />
             <div className="flex-1">
               <h3 className="font-bold text-xl">{p.title}</h3>
               <p className="text-gray-600">{p.images?.length || 0} fotos en galería</p>

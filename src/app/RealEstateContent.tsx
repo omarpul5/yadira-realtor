@@ -303,10 +303,10 @@ useEffect(() => {
             <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={property.image}
+                  src={property.image || (property.images && property.images.length > 0 ? property.images[0] : "/placeholder-default.jpg")}
                   alt={`Propiedad en ${property.location}`}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  onError={(e) => (e.currentTarget.src = "/placeholder-default.jpg")}
                 />
                 <button
                   onClick={(e) => {
@@ -315,6 +315,7 @@ useEffect(() => {
                       ? setFavorites(favorites.filter((fav) => fav !== property.slug))
                       : setFavorites([...favorites, property.slug]);
                   }}
+                  
                   className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl shadow-sm transition hover:scale-110"
                 >
                   {favorites.includes(property.slug) ? "❤️" : "🤍"}

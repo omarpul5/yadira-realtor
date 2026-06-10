@@ -2,12 +2,20 @@ import { Bed, Bath, Calendar } from "lucide-react";
 import Link from "next/link";
 
 export default function PropertyCard({ property }: { property: any }) {
+  // Lógica de respaldo: Prioriza 'image', si no, toma la primera de 'images', o el placeholder
+  const displayImage = property.image || (property.images && property.images.length > 0 ? property.images[0] : "/placeholder-default.jpg");
+
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
       <div className="relative h-64">
-        <img src={property.image} alt={property.title} className="w-full h-full object-cover" />
+        <img 
+          src={displayImage} 
+          alt={property.title} 
+          className="w-full h-full object-cover"
+          // Si la imagen falla al cargar (URL rota), fuerza el uso del placeholder
+          onError={(e) => (e.currentTarget.src = "/placeholder-default.jpg")} 
+        />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-          {/* CAMBIO AQUÍ: usamos property.id en lugar de property.Pies2 */}
           <Link href={`/property/${property.id}`} className="border-2 border-white text-white px-10 py-2 rounded-full font-bold hover:bg-white hover:text-black transition">
             VER
           </Link>
@@ -29,12 +37,11 @@ export default function PropertyCard({ property }: { property: any }) {
           </div>
           <div className="flex flex-col items-center">
             <Calendar size={20} />
-            <span className="text-sm font-bold mt-1">{property.year} Año</span>
+            <span className="text-sm font-bold mt-1">{property.year || "N/A"}</span>
           </div>
         </div>
       </div>
 
-      {/* CAMBIO AQUÍ: usamos property.id en lugar de property.Pies2 */}
       <Link href={`/property/${property.id}`} className="block w-full bg-[#C5B37D] text-white text-center py-4 font-bold hover:bg-[#b09e6d] transition">
         Ver detalles
       </Link>
