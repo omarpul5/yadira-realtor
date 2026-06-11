@@ -115,15 +115,20 @@ useEffect(() => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* HERO SECTION */}
-      <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-32 md:px-6 md:pt-40">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
-            alt="Vista de Miami soleada"
-            className="h-full w-full object-cover brightness-100"
-          />
-        </div>
+      {/* HERO SECTION - Imagen de Miami optimizada */}
+<section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 pt-32 md:px-6 md:pt-40">
+  <div className="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?q=80&w=2070&auto=format&fit=crop"
+      alt="Skyline de Miami y Bahía de Biscayne"
+      className="h-full w-full object-cover brightness-[0.80]"
+    />
+  </div>
+  
+  {/* Gradiente adicional para asegurar legibilidad total */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/40 via-transparent to-transparent" />
+
+  {/* ... el resto de tu contenido sigue igual ... */}
 
         {/* Gradiente más suave y brillante para un look general */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1E293B]/60 via-[#1E293B]/40 to-transparent" />
