@@ -346,8 +346,8 @@ useEffect(() => {
       </section>
 
       {/* SECCIÓN DE GUÍAS - Ubicada entre Propiedades y Nosotros */}
-      <section className="bg-white px-6 py-24">
-        <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 items-center">
+      <section className="bg-gray-50 px-6 py-24">
+        <div className="mx-auto max-w-7xl grid gap-16 lg:grid-cols-2 items-center">
           
           <motion.div 
             initial={{ opacity: 0, x: -30 }} 
@@ -360,33 +360,41 @@ useEffect(() => {
             <p className="mb-8 text-lg text-gray-600">
               Obtén ahora nuestras guías gratuitas para compradores y vendedores.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/guia-comprador" 
-                className="px-6 py-3 bg-[#0284C7] text-white font-bold rounded-xl hover:bg-[#0369A1] transition shadow-md text-center"
-              >
-                Descargar guía compradores
-              </Link>
-              <Link 
-                href="/guia-vendedores" 
-                className="px-6 py-3 border-2 border-[#0284C7] text-[#0284C7] font-bold rounded-xl hover:bg-[#0284C7] hover:text-white transition shadow-sm text-center"
-              >
-                Descargar guía vendedores
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Botón Compradores - Forzamos el color base */}
+            <Link 
+              href="/guia-comprador" 
+              className="px-8 py-4 !bg-white border-2 border-[#0284C7] text-[#0284C7] font-bold rounded-xl hover:!bg-[#0284C7] hover:text-white transition duration-300 shadow-sm text-center transform hover:scale-105"
+              style={{ boxShadow: 'none' }} // Esto elimina cualquier sombra residual
+            >
+              Descargar guía compradores
+            </Link>
+            
+            {/* Botón Vendedores - Forzamos fondo blanco y borde */}
+            <Link 
+              href="/guia-vendedores" 
+              className="px-8 py-4 !bg-white border-2 border-[#0284C7] text-[#0284C7] font-bold rounded-xl hover:!bg-[#0284C7] hover:text-white transition duration-300 shadow-sm text-center transform hover:scale-105"
+            >
+              Descargar guía vendedores
+            </Link>
+          </div>
           </motion.div>
 
+          {/* CONTENEDOR DE LA IMAGEN - AJUSTADO PARA MAYOR TAMAÑO */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }} 
             whileInView={{ opacity: 1, scale: 1 }} 
             viewport={{ once: true }}
-            className="flex justify-center"
+            className="flex justify-center items-center py-4"
           >
-            <img 
-              src="/guias-ebook.png" 
-              alt="Guías inmobiliarias en dispositivos móviles" 
-              className="max-w-md w-full h-auto drop-shadow-2xl" 
-            />
+            {/* Cambiamos max-w-lg por max-w-xl para más tamaño */}
+            <div className="relative w-full max-w-xl transition-transform duration-500 hover:scale-105">
+              <img 
+                src="/guias-ebook.png" 
+                alt="Guías inmobiliarias en dispositivos móviles" 
+                className="w-full h-auto drop-shadow-2xl" 
+              />
+            </div>
           </motion.div>
         </div>
       </section>
