@@ -128,8 +128,6 @@ useEffect(() => {
   {/* Gradiente adicional para asegurar legibilidad total */}
   <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/40 via-transparent to-transparent" />
 
-  {/* ... el resto de tu contenido sigue igual ... */}
-
         {/* Gradiente más suave y brillante para un look general */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#1E293B]/60 via-[#1E293B]/40 to-transparent" />
 
@@ -270,7 +268,7 @@ useEffect(() => {
       </section>
 
       {/* PROPIEDADES DESTACADAS */}
-      <section id="properties" className="bg-[#E2E8F0] px-6 py-24">
+      <section id="properties" className="scroll-mt-24 bg-[#E2E8F0] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-[#1E293B] md:text-4xl">Propiedades Destacadas</h2>
@@ -344,6 +342,52 @@ useEffect(() => {
       ))}
   </div>
 )}
+        </div>
+      </section>
+
+      {/* SECCIÓN DE GUÍAS - Ubicada entre Propiedades y Nosotros */}
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 items-center">
+          
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-6 text-3xl font-bold text-[#1E293B] md:text-4xl leading-tight">
+              ¿ESTÁS LISTO PARA COMPRAR O VENDER TU PROPIEDAD?
+            </h2>
+            <p className="mb-8 text-lg text-gray-600">
+              Obtén ahora nuestras guías gratuitas para compradores y vendedores.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/guia-comprador" 
+                className="px-6 py-3 bg-[#0284C7] text-white font-bold rounded-xl hover:bg-[#0369A1] transition shadow-md text-center"
+              >
+                Descargar guía compradores
+              </Link>
+              <Link 
+                href="/guia-vendedores" 
+                className="px-6 py-3 border-2 border-[#0284C7] text-[#0284C7] font-bold rounded-xl hover:bg-[#0284C7] hover:text-white transition shadow-sm text-center"
+              >
+                Descargar guía vendedores
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }} 
+            whileInView={{ opacity: 1, scale: 1 }} 
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <img 
+              src="/guias-ebook.png" 
+              alt="Guías inmobiliarias en dispositivos móviles" 
+              className="max-w-md w-full h-auto drop-shadow-2xl" 
+            />
+          </motion.div>
         </div>
       </section>
 
