@@ -267,83 +267,67 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* PROPIEDADES DESTACADAS */}
-      <section id="properties" className="scroll-mt-24 bg-[#E2E8F0] px-6 py-24">
+      
+      
+      {/* PROYECTOS DE INVERSIÓN */}
+      <section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-6 pt-12 pb-24 md:pt-16 md:pb-28">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#1E293B] md:text-4xl">Propiedades Destacadas</h2>
-            <p className="mt-4 text-gray-600">Explora las mejores opciones disponibles en el mercado actual.</p>
+          <div className="mb-14 text-center">
+            <p className="mb-4 text-base font-bold tracking-[0.2em] text-[#0284C7]">
+              OPORTUNIDADES INMOBILIARIAS
+            </p>
+
+            <h2 className="text-4xl font-bold text-[#1E293B] md:text-5xl">
+              Proyectos de Inversión
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-gray-600 md:text-xl">
+              Descubre desarrollos inmobiliarios destacados en Miami y otras zonas de Florida.
+              Explora sus características y encuentra una oportunidad alineada con tus objetivos.
+            </p>
           </div>
 
-          {/* PROPIEDADES DESTACADAS - Lógica de Filtrado Optimizada */}
-{loading ? (
-  <div className="flex justify-center items-center py-20">
-    <p className="text-xl text-gray-500 font-medium">Cargando propiedades...</p>
-  </div>
-) : (
-  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    {properties
-      .filter((property) => {
-        // Limpia el precio eliminando todo lo que no sea número (US$, comas, espacios)
-        const numericPrice = Number((property.price || "0").toString().replace(/[^0-9]/g, ""));
-        
-        let matchesPrice = true;
-        if (priceFilter !== "All") {
-          const [min, max] = priceFilter.split("-").map(Number);
-          matchesPrice = numericPrice >= min && numericPrice <= max;
-        }
-        
-        // Mantenemos tus otros filtros existentes
-        const matchesSearch = property.title?.toLowerCase().includes(search.toLowerCase()) || 
-                              property.location?.toLowerCase().includes(search.toLowerCase());
-        const matchesType = typeFilter === "All" ? true : property.type === typeFilter;
+          <div className="mx-auto grid max-w-md gap-8 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+            <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <Link href="/proyectos/okan-tower" className="block">
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src="/proyectos/okan-tower/fachada.jpg"
+                    alt="Okan Tower, proyecto residencial en Downtown Miami"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
 
-        return matchesSearch && matchesPrice && matchesType;
-      })
-      .map((property) => (
-        <article key={property.id} className="group">
-          <Link href={`/details?id=${property.id}`} className="block h-full">
-            <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-100">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={property.image || (property.images && property.images.length > 0 ? property.images[0] : "/placeholder-default.jpg")}
-                  alt={`Propiedad en ${property.location}`}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  onError={(e) => (e.currentTarget.src = "/placeholder-default.jpg")}
-                />
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    favorites.includes(property.slug) 
-                      ? setFavorites(favorites.filter((fav) => fav !== property.slug))
-                      : setFavorites([...favorites, property.slug]);
-                  }}
-                  
-                  className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl shadow-sm transition hover:scale-110"
-                >
-                  {favorites.includes(property.slug) ? "❤️" : "🤍"}
-                </button>
-              </div>
-              <div className="flex flex-col flex-grow p-6">
-                <p className="mb-2 text-2xl font-bold text-[#0284C7]">{property.price}</p>
-                <h3 className="mb-2 text-lg font-semibold text-[#1E293B] line-clamp-1">{property.title}</h3>
-                <p className="mb-4 flex items-center gap-1.5 text-sm text-gray-500">
-                  <MapPin size={16} className="text-[#0284C7]"/> {property.location}
-                </p>
-                <div className="mt-auto flex justify-between border-t border-gray-100 pt-4 text-sm font-medium text-gray-600">
-                  <span>{property.beds} Hab</span>
-                  <span>{property.baths} Baños</span>
-                  <span>{property.Pies2} Pies<sup>2</sup></span>
+                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-sm font-bold tracking-wide text-[#0284C7] shadow-sm">
+                    DOWNTOWN MIAMI
+                  </span>
                 </div>
-              </div>
-            </div>
-          </Link>
-        </article>
-      ))}
-  </div>
-)}
+
+                <div className="p-7">
+                  <p className="mb-3 text-sm font-bold tracking-[0.15em] text-[#0284C7]">
+                    PROYECTO DESTACADO
+                  </p>
+
+                  <h3 className="mb-4 text-3xl font-bold text-[#1E293B]">
+                    Okan Tower
+                  </h3>
+
+                  <p className="mb-7 text-base leading-relaxed text-gray-600 md:text-lg">
+                    Un desarrollo de uso mixto en el corazón de Downtown Miami, con residencias,
+                    espacios hoteleros y amenidades de alto nivel.
+                  </p>
+
+                  <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-base font-bold text-white transition hover:bg-[#0369A1]">
+                    CONOCER PROYECTO
+                  </span>
+                </div>
+              </Link>
+            </article>
+          </div>
         </div>
       </section>
+
+
 
       {/* SECCIÓN DE GUÍAS - Ubicada entre Propiedades y Nosotros */}
       <section className="bg-gray-50 px-6 py-24">
