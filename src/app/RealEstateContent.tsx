@@ -312,7 +312,7 @@ useEffect(() => {
                     Okan Tower
                   </h3>
 
-                  <p className="mb-7 text-base leading-relaxed text-gray-600 md:text-lg">
+                  <p className="mb-7 text-lg leading-relaxed text-gray-600">
                     Un desarrollo de uso mixto en el corazón de Downtown Miami, con residencias,
                     espacios hoteleros y amenidades de alto nivel.
                   </p>
