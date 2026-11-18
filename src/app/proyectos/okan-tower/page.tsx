@@ -12,11 +12,12 @@ import {
   Waves,
   Dumbbell,
   Sparkles,
-  MessageCircle,
+   MessageCircle,
   CheckCircle2,
   Menu,
   X,
   Home,
+  Camera as InstagramIcon,
 } from "lucide-react";
 
 const whatsapp =
@@ -523,26 +524,129 @@ export default function OkanTowerPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-[#07101F] px-6 py-10 text-center text-sm text-white/60">
-        <p className="mb-2 tracking-wide text-[#C8A96B]">
-          YADIRA PORTUONDO · REALTOR® MIAMI
+      
+{/* FOOTER */}
+<footer className="bg-[#0B1220] px-6 pt-16 text-gray-300">
+  <div className="mx-auto max-w-7xl">
+
+    {/* CONTENIDO PRINCIPAL */}
+    <div className="grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-3">
+
+      {/* MARCA PERSONAL */}
+      <div>
+        <Link href="/#home" className="mb-5 inline-flex items-center gap-3">
+          <Home className="h-7 w-7 text-[#38BDF8]" />
+          <span className="text-2xl font-bold tracking-tight text-white">
+            YADIRA PORTUONDO
+          </span>
+        </Link>
+
+        <p className="mb-6 max-w-sm text-sm leading-7 text-gray-400">
+          Asesoría inmobiliaria profesional, transparente y personalizada
+          para acompañarte en tus decisiones inmobiliarias en Miami y el
+          Sur de Florida.
         </p>
 
-        <p>
-          © {new Date().getFullYear()} Yadira Portuondo Realtor.
-          Todos los derechos reservados.
-        </p>
-
-        <div className="mt-4">
-          <Link
-            href="/"
-            className="transition hover:text-[#C8A96B]"
+        <div className="flex gap-3">
+          <a
+            href="https://www.instagram.com/yadiraportuondorealtor/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-300 transition hover:border-[#C8A96B] hover:text-[#C8A96B]"
           >
-            Volver a la página principal
-          </Link>
+            <InstagramIcon className="h-5 w-5" />
+          </a>
+
+          <a
+            href="https://wa.me/13056290218"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-700 text-gray-300 transition hover:border-[#C8A96B] hover:text-[#C8A96B]"
+          >
+            <MessageCircle size={20} />
+          </a>
         </div>
-      </footer>
+      </div>
+
+      {/* NAVEGACIÓN */}
+      <div>
+        <h4 className="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
+          Explora
+        </h4>
+
+        <ul className="space-y-4 text-sm text-gray-400">
+          <li><Link href="/#home" className="transition hover:text-white">Inicio</Link></li>
+          <li><Link href="/#properties" className="transition hover:text-white">Propiedades</Link></li>
+          <li><Link href="/#projects" className="transition hover:text-white">Proyectos de inversión</Link></li>
+          <li><Link href="/#about" className="transition hover:text-white">Sobre mí</Link></li>
+          <li><Link href="/#contact" className="transition hover:text-white">Contacto</Link></li>
+        </ul>
+      </div>
+
+      {/* CONTACTO */}
+      <div>
+        <h4 className="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
+          Contacto
+        </h4>
+
+        <p className="mb-2 text-sm text-gray-400">
+          Atención personalizada
+        </p>
+
+        <a
+          href="https://wa.me/13056290218"
+          target="_blank"
+          rel="noreferrer"
+          className="text-xl font-semibold text-white transition hover:text-[#C8A96B]"
+        >
+          +1 (305) 629-0218
+        </a>
+
+        <p className="mt-6 text-sm leading-6 text-gray-400">
+          Miami y Sur de Florida
+        </p>
+      </div>
+    </div>
+
+    {/* BROKERAGE */}
+    <div className="flex flex-col items-center justify-between gap-6 border-t border-gray-800 py-9 sm:flex-row">
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#C8A96B]">
+          Brokerage
+        </p>
+        <p className="mt-2 text-lg font-semibold text-white">
+          Universal Realty Group
+        </p>
+        <p className="mt-1 text-sm text-gray-400">
+          Firma de corretaje inmobiliario
+        </p>
+      </div>
+
+      <div className="flex h-32 w-72 items-center justify-center overflow-hidden">
+        <img
+          src="/universal-realty-group.png"
+          alt="Universal Realty Group"
+          className="h-full w-full object-contain mix-blend-screen"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  {/* COPYRIGHT */}
+  <div className="border-t border-gray-800">
+    <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 py-6 text-center text-xs text-gray-500 sm:flex-row sm:text-left">
+      <p>
+        © {new Date().getFullYear()} Yadira Portuondo. Todos los derechos reservados.
+      </p>
+
+      <p>Miami, Florida · Real Estate</p>
+    </div>
+  </div>
+</footer>
+
     </main>
   );
 }

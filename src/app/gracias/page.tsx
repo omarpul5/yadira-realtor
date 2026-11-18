@@ -68,4 +68,4 @@ export default function Gracias() {
       <Footer />
     </main>
   );
-}
+}   
