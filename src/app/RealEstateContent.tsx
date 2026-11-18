@@ -269,63 +269,105 @@ useEffect(() => {
 
       
       
-      {/* PROYECTOS DE INVERSIÓN */}
-      <section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-6 pt-12 pb-24 md:pt-16 md:pb-28">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <p className="mb-4 text-base font-bold tracking-[0.2em] text-[#0284C7]">
-              OPORTUNIDADES INMOBILIARIAS
-            </p>
+      
+{/* PROYECTOS DE INVERSIÓN */}
+<section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-6 pt-12 pb-24 md:pt-16 md:pb-28">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-14 text-center">
+      <p className="mb-4 text-base font-bold tracking-[0.2em] text-[#0284C7]">
+        OPORTUNIDADES INMOBILIARIAS
+      </p>
 
-            <h2 className="text-4xl font-bold text-[#1E293B] md:text-5xl">
-              Proyectos de Inversión
-            </h2>
+      <h2 className="text-4xl font-bold text-[#1E293B] md:text-5xl">
+        Proyectos de Inversión
+      </h2>
 
-            <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-gray-600 md:text-xl">
-              Descubre desarrollos inmobiliarios destacados en Miami y otras zonas de Florida.
-              Explora sus características y encuentra una oportunidad alineada con tus objetivos.
-            </p>
+      <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-gray-600 md:text-xl">
+        Descubre desarrollos inmobiliarios destacados en Miami y otras zonas de Florida.
+        Explora sus características y encuentra una oportunidad alineada con tus objetivos.
+      </p>
+    </div>
+
+    <div className="mx-auto grid max-w-md gap-8 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+
+      {/* OKAN TOWER */}
+      <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <Link href="/proyectos/okan-tower" className="block">
+          <div className="relative h-72 overflow-hidden">
+            <img
+              src="/proyectos/okan-tower/fachada.jpg"
+              alt="Okan Tower, proyecto residencial en Downtown Miami"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-sm font-bold tracking-wide text-[#0284C7] shadow-sm">
+              DOWNTOWN MIAMI
+            </span>
           </div>
 
-          <div className="mx-auto grid max-w-md gap-8 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
-            <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <Link href="/proyectos/okan-tower" className="block">
-                <div className="relative h-72 overflow-hidden">
-                  <img
-                    src="/proyectos/okan-tower/fachada.jpg"
-                    alt="Okan Tower, proyecto residencial en Downtown Miami"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
+          <div className="p-7">
+            <p className="mb-3 text-sm font-bold tracking-[0.15em] text-[#0284C7]">
+              PROYECTO DESTACADO
+            </p>
 
-                  <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-sm font-bold tracking-wide text-[#0284C7] shadow-sm">
-                    DOWNTOWN MIAMI
-                  </span>
-                </div>
+            <h3 className="mb-4 text-3xl font-bold text-[#1E293B]">
+              Okan Tower
+            </h3>
 
-                <div className="p-7">
-                  <p className="mb-3 text-sm font-bold tracking-[0.15em] text-[#0284C7]">
-                    PROYECTO DESTACADO
-                  </p>
+            <p className="mb-7 text-lg leading-relaxed text-gray-600">
+              Un desarrollo de uso mixto en el corazón de Downtown Miami, con residencias,
+              espacios hoteleros y amenidades de alto nivel.
+            </p>
 
-                  <h3 className="mb-4 text-3xl font-bold text-[#1E293B]">
-                    Okan Tower
-                  </h3>
-
-                  <p className="mb-7 text-lg leading-relaxed text-gray-600">
-                    Un desarrollo de uso mixto en el corazón de Downtown Miami, con residencias,
-                    espacios hoteleros y amenidades de alto nivel.
-                  </p>
-
-                  <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-base font-bold text-white transition hover:bg-[#0369A1]">
-                    CONOCER PROYECTO
-                  </span>
-                </div>
-              </Link>
-            </article>
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-base font-bold text-white transition hover:bg-[#0369A1]">
+              CONOCER PROYECTO
+            </span>
           </div>
-        </div>
-      </section>
+        </Link>
+      </article>
+
+      {/* 72 PARK */}
+      <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <Link href="/proyectos/72-park" className="block">
+          <div className="relative h-72 overflow-hidden">
+            <img
+              src="/proyectos/72-park/fachada.jpg"
+              alt="72 Park, proyecto residencial en Miami Beach"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-sm font-bold tracking-wide text-[#0284C7] shadow-sm">
+              MIAMI BEACH
+            </span>
+          </div>
+
+          <div className="p-7">
+            <p className="mb-3 text-sm font-bold tracking-[0.15em] text-[#0284C7]">
+              PROYECTO DESTACADO
+            </p>
+
+            <h3 className="mb-4 text-3xl font-bold text-[#1E293B]">
+              72 Park
+            </h3>
+
+            <p className="mb-7 text-lg leading-relaxed text-gray-600">
+              Un proyecto residencial contemporáneo en Miami Beach, con arquitectura moderna,
+              espacios de bienestar y amenidades diseñadas para disfrutar.
+            </p>
+
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-base font-bold text-white transition hover:bg-[#0369A1]">
+              CONOCER PROYECTO
+            </span>
+          </div>
+        </Link>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 
 
 
