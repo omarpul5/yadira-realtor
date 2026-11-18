@@ -272,7 +272,7 @@ useEffect(() => {
       
 {/* PROYECTOS DE INVERSIÓN */}
 <section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-6 pt-12 pb-24 md:pt-16 md:pb-28">
-  <div className="mx-auto max-w-7xl">
+  <div className="mx-auto max-w-6xl">
     <div className="mb-14 text-center">
       <p className="mb-4 text-base font-bold tracking-[0.2em] text-[#0284C7]">
         OPORTUNIDADES INMOBILIARIAS
@@ -615,23 +615,24 @@ useEffect(() => {
       </section>
 
 
-{/* FOOTER */}
-<footer className="bg-[#0B1220] px-6 pt-16 text-gray-300">
-  <div className="mx-auto max-w-7xl">
 
-    {/* CONTENIDO PRINCIPAL */}
-    <div className="grid gap-12 pb-14 md:grid-cols-2 lg:grid-cols-3">
+
+{/* FOOTER */}
+<footer className="bg-[#0B1220] px-6 pt-10 text-gray-300">
+  {/* CONTENIDO PRINCIPAL */}
+  <div className="mx-auto max-w-6xl">
+    <div className="grid grid-cols-1 items-start gap-10 pb-9 md:grid-cols-[1.25fr_0.75fr_1fr] md:gap-12 lg:gap-16">
 
       {/* MARCA PERSONAL */}
-      <div>
-        <Link href="#home" className="mb-5 inline-flex items-center gap-3">
-          <HomeIcon className="h-7 w-7 text-[#38BDF8]" />
+      <div className="min-w-0">
+        <Link href="#home" className="mb-4 inline-flex items-center gap-3">
+          <HomeIcon className="h-7 w-7 shrink-0 text-[#38BDF8]" />
           <span className="text-2xl font-bold tracking-tight text-white">
             YADIRA PORTUONDO
           </span>
         </Link>
 
-        <p className="mb-6 max-w-sm text-sm leading-7 text-gray-400">
+        <p className="mb-5 max-w-sm text-sm leading-7 text-gray-400">
           Asesoría inmobiliaria profesional, transparente y personalizada
           para acompañarte en tus decisiones inmobiliarias en Miami y el
           Sur de Florida.
@@ -661,94 +662,79 @@ useEffect(() => {
       </div>
 
       {/* NAVEGACIÓN */}
-      <div>
-        <h4 className="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
+      <div className="md:pl-2">
+        <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
           Explora
         </h4>
 
-        <ul className="space-y-4 text-sm text-gray-400">
-          <li>
-            <Link href="#home" className="transition hover:text-white">
-              Inicio
-            </Link>
-          </li>
-          <li>
-            <Link href="#properties" className="transition hover:text-white">
-              Propiedades
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" className="transition hover:text-white">
-              Proyectos de inversión
-            </Link>
-          </li>
-          <li>
-            <Link href="#about" className="transition hover:text-white">
-              Sobre mí
-            </Link>
-          </li>
-          <li>
-            <Link href="#contact" className="transition hover:text-white">
-              Contacto
-            </Link>
-          </li>
+        <ul className="space-y-3 text-sm text-gray-400">
+          <li><Link href="#home" className="transition hover:text-white">Inicio</Link></li>
+          <li><Link href="#properties" className="transition hover:text-white">Propiedades</Link></li>
+          <li><Link href="#projects" className="transition hover:text-white">Proyectos de inversión</Link></li>
+          <li><Link href="#about" className="transition hover:text-white">Sobre mí</Link></li>
+          <li><Link href="#contact" className="transition hover:text-white">Contacto</Link></li>
         </ul>
       </div>
 
-      {/* CONTACTO */}
-      <div>
-        <h4 className="mb-6 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
-          Contacto
-        </h4>
+      
+{/* CONTACTO */}
+<div className="md:pl-2 md:text-right">
+  <h4 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-[#C8A96B]">
+    Contacto
+  </h4>
 
-        <p className="mb-2 text-sm text-gray-400">
-          Atención personalizada
-        </p>
+  <p className="mb-2 text-sm text-gray-400">
+    Atención personalizada
+  </p>
 
-        <a
-          href="https://wa.me/13056290218"
-          target="_blank"
-          rel="noreferrer"
-          className="text-xl font-semibold text-white transition hover:text-[#C8A96B]"
-        >
-          +1 (305) 629-0218
-        </a>
+  <a
+    href="https://wa.me/13056290218"
+    target="_blank"
+    rel="noreferrer"
+    className="text-xl font-semibold text-white transition hover:text-[#C8A96B]"
+  >
+    +1 (305) 629-0218
+  </a>
 
-        <p className="mt-6 text-sm leading-6 text-gray-400">
-          Miami y Sur de Florida
-        </p>
-      </div>
-    </div>
-
-   
-{/* BROKERAGE */}
-<div className="flex flex-col items-center justify-between gap-6 border-t border-gray-800 py-9 sm:flex-row">
-  <div>
-    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#C8A96B]">
-      Brokerage
-    </p>
-    <p className="mt-2 text-lg font-semibold text-white">
-      Universal Realty Group
-    </p>
-    <p className="mt-1 text-sm text-gray-400">
-      Firma de corretaje inmobiliario
-    </p>
-  </div>
-
-  <div className="flex h-32 w-72 items-center justify-center overflow-hidden">
-    <img
-      src="/universal-realty-group.png"
-      alt="Universal Realty Group"
-      className="h-full w-full object-contain mix-blend-screen"
-    />
-  </div>
+  <p className="mt-5 text-sm leading-6 text-gray-400">
+    Miami y Sur de Florida
+  </p>
 </div>
 
+    </div>
+  </div>
+
+  {/* BROKERAGE - FRANJA DE CONTRASTE */}
+  <div className="-mx-6 bg-[#17263D] px-6">
+    <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 py-6 sm:flex-row">
+
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#C8A96B]">
+          Brokerage
+        </p>
+
+        <p className="mt-2 text-lg font-semibold text-white">
+          Universal Realty Group
+        </p>
+
+        <p className="mt-1 text-sm text-gray-300">
+          Firma de corretaje inmobiliario
+        </p>
+      </div>
+
+      <div className="flex h-20 w-64 items-center justify-center overflow-hidden translate-x-12 bg-transparent">
+  <img
+    src="/universal-realty-group.png"
+    alt="Universal Realty Group"
+    className="h-full w-full scale-[2.3] object-contain mix-blend-screen"
+  />
+</div>
+    </div>
   </div>
 
   {/* COPYRIGHT */}
   <div className="border-t border-gray-800">
-    <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 py-6 text-center text-xs text-gray-500 sm:flex-row sm:text-left">
+    <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 py-5 text-center text-xs text-gray-500 sm:flex-row sm:text-left">
       <p>
         © {new Date().getFullYear()} Yadira Portuondo. Todos los derechos reservados.
       </p>
@@ -757,7 +743,7 @@ useEffect(() => {
     </div>
   </div>
 </footer>
-```
+
 
 
 
