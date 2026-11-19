@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
-// Ícono SVG nativo para Instagram (Evita errores de lucide-react)
+  // Ícono SVG nativo para Instagram (Evita errores de lucide-react)
 const InstagramIcon = ({ className = "w-6 h-6" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
@@ -34,7 +34,6 @@ export default function Home() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false); // Estado para el botón de enviar
-
   const [isMounted, setIsMounted] = useState(false);
 
   // Fetch Properties desde Supabase
@@ -363,6 +362,46 @@ useEffect(() => {
           </div>
         </Link>
       </article>
+
+
+      {/* NATIIVO FORT LAUDERDALE */}
+      <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <Link href="/proyectos/natiivo-fort-lauderdale" className="block">
+          <div className="relative h-72 overflow-hidden">
+            <img
+              src="/proyectos/natiivo-fort-lauderdale/fachada.jpg"
+              alt="Natiivo Fort Lauderdale"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+
+            <span className="absolute left-4 top-4 rounded-full bg-white/95 px-4 py-2 text-sm font-bold tracking-wide text-[#0284C7] shadow-sm">
+              FORT LAUDERDALE
+            </span>
+          </div>
+
+          <div className="p-7">
+            <p className="mb-3 text-sm font-bold tracking-[0.15em] text-[#0284C7]">
+              PROYECTO DESTACADO
+            </p>
+
+            <h3 className="mb-4 text-3xl font-bold text-[#1E293B]">
+              Natiivo Fort Lauderdale
+            </h3>
+
+            <p className="mb-7 text-lg leading-relaxed text-gray-600">
+              Una propuesta residencial de concepto contemporáneo que integra
+              diseño, hospitalidad y espacios pensados para disfrutar de la
+              vida urbana en el sur de Florida.
+            </p>
+
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-base font-bold text-white transition hover:bg-[#0369A1]">
+              CONOCER PROYECTO
+            </span>
+          </div>
+        </Link>
+      </article>
+
 
     </div>
   </div>
