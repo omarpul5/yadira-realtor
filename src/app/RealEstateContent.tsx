@@ -270,69 +270,67 @@ useEffect(() => {
 
 
 
+
 {/* PROYECTOS DE INVERSIÓN */}
-<section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-6 pt-12 pb-24 md:pt-16 md:pb-28">
+<section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-5 py-12 md:px-6 md:pt-16 md:pb-28">
   <div className="mx-auto max-w-6xl">
 
-    <div className="mb-14 text-center">
-      <p className="mb-4 text-base font-bold tracking-[0.2em] text-[#0284C7]">
+    <div className="mb-10 text-center md:mb-14">
+      <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#0284C7] md:text-base">
         OPORTUNIDADES INMOBILIARIAS
       </p>
 
-      <h2 className="text-4xl font-bold text-[#1E293B] md:text-5xl">
+      <h2 className="text-3xl font-bold text-[#1E293B] md:text-5xl">
         Proyectos de Inversión
       </h2>
 
-      <p className="mx-auto mt-5 max-w-4xl text-lg leading-relaxed text-gray-600 md:text-xl">
+      <p className="mx-auto mt-5 max-w-4xl text-base leading-relaxed text-gray-600 md:text-xl">
         Descubre desarrollos inmobiliarios destacados en Miami y otras zonas de Florida.
         Explora sus características y encuentra una oportunidad alineada con tus objetivos.
       </p>
     </div>
 
-    <div className="mx-auto grid max-w-md gap-8 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-md gap-7 md:max-w-none md:grid-cols-2 md:gap-8 lg:grid-cols-3">
 
       {/* OKAN TOWER */}
       <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
         <Link href="/proyectos/okan-tower" className="block">
-          <div className="relative h-[420px] overflow-hidden">
+
+          <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
 
             <img
               src="/proyectos/okan-tower/fachada.jpg"
               alt="Okan Tower, Downtown Miami"
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="h-full w-full object-cover transition-transform duration-700 md:group-hover:scale-110"
               loading="lazy"
             />
 
-            {/* DEGRADADO */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20 transition-opacity duration-500 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20" />
 
-            {/* UBICACIÓN */}
-            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-5 py-3 text-sm font-bold tracking-wide text-[#0284C7] shadow-lg transition-opacity duration-300 group-hover:opacity-0">
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-4 py-2.5 text-xs font-bold tracking-wide text-[#0284C7] shadow-lg md:px-5 md:py-3 md:text-sm">
               DOWNTOWN MIAMI
             </span>
 
-            {/* LOGOTIPO Y FIRMA YADIRA */}
-            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 group-hover:scale-90 group-hover:opacity-0">
-
+            {/* LOGOTIPO Y FIRMA */}
+            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 md:group-hover:scale-90 md:group-hover:opacity-0">
               <img
                 src="/proyectos/logos/okan-logo.webp"
                 alt="Logotipo Okan Tower"
-                className="max-h-36 w-full max-w-[260px] object-contain brightness-0 invert drop-shadow-lg"
+                className="max-h-28 w-full max-w-[230px] object-contain brightness-0 invert drop-shadow-lg md:max-h-36 md:max-w-[260px]"
               />
 
-              {/* FIRMA EN LA PARTE INFERIOR */}
-              <div className="absolute bottom-8 left-0 right-0 text-center">
-                <p className="text-sm font-semibold tracking-[0.16em] text-white drop-shadow-md">
+              <div className="absolute bottom-7 left-0 right-0 text-center md:bottom-8">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white drop-shadow-md md:text-sm md:tracking-[0.16em]">
                   YADIRA PORTUONDO
                 </p>
-                <p className="mt-1 text-[9px] font-medium tracking-[0.25em] text-white/90 drop-shadow-md">
+                <p className="mt-1 text-[8px] font-medium tracking-[0.2em] text-white/90 drop-shadow-md md:text-[9px] md:tracking-[0.25em]">
                   REALTOR® | SOUTH FLORIDA
                 </p>
               </div>
             </div>
 
-            {/* INFORMACIÓN AL PASAR EL CURSOR */}
-            <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-100 transition-all duration-500 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            {/* INFORMACIÓN: SOLO ESCRITORIO */}
+            <div className="absolute inset-0 hidden flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-0 transition-all duration-500 md:flex md:translate-y-6 md:group-hover:translate-y-0 md:group-hover:opacity-100">
 
               <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#C8A96B]">
                 PROYECTO DESTACADO
@@ -347,56 +345,71 @@ useEffect(() => {
                 con residencias, espacios hoteleros y amenidades de alto nivel.
               </p>
 
-              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white transition hover:bg-[#0369A1]">
+              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white">
                 CONOCER PROYECTO
               </span>
             </div>
           </div>
+
+          {/* INFORMACIÓN: SOLO CELULAR */}
+          <div className="bg-white p-6 md:hidden">
+            <p className="mb-2 text-xs font-bold tracking-[0.18em] text-[#C8A96B]">
+              PROYECTO DESTACADO
+            </p>
+            <h3 className="mb-3 text-2xl font-bold text-[#1E293B]">
+              Okan Tower
+            </h3>
+            <p className="mb-5 text-base leading-relaxed text-gray-600">
+              Un desarrollo de uso mixto en el corazón de Downtown Miami,
+              con residencias, espacios hoteleros y amenidades de alto nivel.
+            </p>
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-5 py-4 text-sm font-bold tracking-wide text-white">
+              CONOCER PROYECTO
+            </span>
+          </div>
+
         </Link>
       </article>
 
       {/* 72 PARK */}
       <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
         <Link href="/proyectos/72-park" className="block">
-          <div className="relative h-[420px] overflow-hidden">
+
+          <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
 
             <img
               src="/proyectos/72-park/fachada.jpg"
               alt="72 Park, Miami Beach"
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="h-full w-full object-cover transition-transform duration-700 md:group-hover:scale-110"
               loading="lazy"
             />
 
-            {/* DEGRADADO */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20 transition-opacity duration-500 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20" />
 
-            {/* UBICACIÓN */}
-            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-5 py-3 text-sm font-bold tracking-wide text-[#0284C7] shadow-lg transition-opacity duration-300 group-hover:opacity-0">
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-4 py-2.5 text-xs font-bold tracking-wide text-[#0284C7] shadow-lg md:px-5 md:py-3 md:text-sm">
               MIAMI BEACH
             </span>
 
-            {/* LOGOTIPO Y FIRMA YADIRA */}
-            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 group-hover:scale-90 group-hover:opacity-0">
-
+            {/* LOGOTIPO Y FIRMA */}
+            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 md:group-hover:scale-90 md:group-hover:opacity-0">
               <img
                 src="/proyectos/logos/72-park-logo.svg"
                 alt="Logotipo 72 Park Miami Beach"
-                className="max-h-36 w-full max-w-[280px] object-contain brightness-0 invert drop-shadow-lg"
+                className="max-h-28 w-full max-w-[250px] object-contain brightness-0 invert drop-shadow-lg md:max-h-36 md:max-w-[280px]"
               />
 
-              {/* FIRMA EN LA PARTE INFERIOR */}
-              <div className="absolute bottom-8 left-0 right-0 text-center">
-                <p className="text-sm font-semibold tracking-[0.16em] text-white drop-shadow-md">
+              <div className="absolute bottom-7 left-0 right-0 text-center md:bottom-8">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white drop-shadow-md md:text-sm md:tracking-[0.16em]">
                   YADIRA PORTUONDO
                 </p>
-                <p className="mt-1 text-[9px] font-medium tracking-[0.25em] text-white/90 drop-shadow-md">
+                <p className="mt-1 text-[8px] font-medium tracking-[0.2em] text-white/90 drop-shadow-md md:text-[9px] md:tracking-[0.25em]">
                   REALTOR® | SOUTH FLORIDA
                 </p>
               </div>
             </div>
 
-            {/* INFORMACIÓN AL PASAR EL CURSOR */}
-            <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-100 transition-all duration-500 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            {/* INFORMACIÓN: SOLO ESCRITORIO */}
+            <div className="absolute inset-0 hidden flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-0 transition-all duration-500 md:flex md:translate-y-6 md:group-hover:translate-y-0 md:group-hover:opacity-100">
 
               <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#C8A96B]">
                 PROYECTO DESTACADO
@@ -412,56 +425,72 @@ useEffect(() => {
                 amenidades diseñadas para disfrutar.
               </p>
 
-              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white transition hover:bg-[#0369A1]">
+              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white">
                 CONOCER PROYECTO
               </span>
             </div>
           </div>
+
+          {/* INFORMACIÓN: SOLO CELULAR */}
+          <div className="bg-white p-6 md:hidden">
+            <p className="mb-2 text-xs font-bold tracking-[0.18em] text-[#C8A96B]">
+              PROYECTO DESTACADO
+            </p>
+            <h3 className="mb-3 text-2xl font-bold text-[#1E293B]">
+              72 Park
+            </h3>
+            <p className="mb-5 text-base leading-relaxed text-gray-600">
+              Un proyecto residencial contemporáneo en Miami Beach,
+              con arquitectura moderna, espacios de bienestar y
+              amenidades diseñadas para disfrutar.
+            </p>
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-5 py-4 text-sm font-bold tracking-wide text-white">
+              CONOCER PROYECTO
+            </span>
+          </div>
+
         </Link>
       </article>
 
       {/* NATIIVO FORT LAUDERDALE */}
       <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
         <Link href="/proyectos/natiivo-fort-lauderdale" className="block">
-          <div className="relative h-[420px] overflow-hidden">
+
+          <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
 
             <img
               src="/proyectos/natiivo-fort-lauderdale/fachada.jpg"
               alt="Natiivo Fort Lauderdale"
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="h-full w-full object-cover transition-transform duration-700 md:group-hover:scale-110"
               loading="lazy"
             />
 
-            {/* DEGRADADO */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20 transition-opacity duration-500 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20" />
 
-            {/* UBICACIÓN */}
-            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-5 py-3 text-sm font-bold tracking-wide text-[#0284C7] shadow-lg transition-opacity duration-300 group-hover:opacity-0">
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-4 py-2.5 text-xs font-bold tracking-wide text-[#0284C7] shadow-lg md:px-5 md:py-3 md:text-sm">
               FORT LAUDERDALE
             </span>
 
-            {/* LOGOTIPO Y FIRMA YADIRA */}
-            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 group-hover:scale-90 group-hover:opacity-0">
-
+            {/* LOGOTIPO Y FIRMA */}
+            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 md:group-hover:scale-90 md:group-hover:opacity-0">
               <img
                 src="/proyectos/logos/natiivo-logo.png"
                 alt="Logotipo Natiivo Fort Lauderdale"
-                className="max-h-36 w-full max-w-[280px] object-contain brightness-0 invert drop-shadow-lg"
+                className="max-h-28 w-full max-w-[250px] object-contain brightness-0 invert drop-shadow-lg md:max-h-36 md:max-w-[280px]"
               />
 
-              {/* FIRMA EN LA PARTE INFERIOR */}
-              <div className="absolute bottom-8 left-0 right-0 text-center">
-                <p className="text-sm font-semibold tracking-[0.16em] text-white drop-shadow-md">
+              <div className="absolute bottom-7 left-0 right-0 text-center md:bottom-8">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white drop-shadow-md md:text-sm md:tracking-[0.16em]">
                   YADIRA PORTUONDO
                 </p>
-                <p className="mt-1 text-[9px] font-medium tracking-[0.25em] text-white/90 drop-shadow-md">
+                <p className="mt-1 text-[8px] font-medium tracking-[0.2em] text-white/90 drop-shadow-md md:text-[9px] md:tracking-[0.25em]">
                   REALTOR® | SOUTH FLORIDA
                 </p>
               </div>
             </div>
 
-            {/* INFORMACIÓN AL PASAR EL CURSOR */}
-            <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-100 transition-all duration-500 md:translate-y-6 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            {/* INFORMACIÓN: SOLO ESCRITORIO */}
+            <div className="absolute inset-0 hidden flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-0 transition-all duration-500 md:flex md:translate-y-6 md:group-hover:translate-y-0 md:group-hover:opacity-100">
 
               <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#C8A96B]">
                 PROYECTO DESTACADO
@@ -477,17 +506,37 @@ useEffect(() => {
                 vida urbana en el sur de Florida.
               </p>
 
-              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white transition hover:bg-[#0369A1]">
+              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white">
                 CONOCER PROYECTO
               </span>
             </div>
           </div>
+
+          {/* INFORMACIÓN: SOLO CELULAR */}
+          <div className="bg-white p-6 md:hidden">
+            <p className="mb-2 text-xs font-bold tracking-[0.18em] text-[#C8A96B]">
+              PROYECTO DESTACADO
+            </p>
+            <h3 className="mb-3 text-2xl font-bold text-[#1E293B]">
+              Natiivo Fort Lauderdale
+            </h3>
+            <p className="mb-5 text-base leading-relaxed text-gray-600">
+              Una propuesta residencial de concepto contemporáneo que integra
+              diseño, hospitalidad y espacios pensados para disfrutar de la
+              vida urbana en el sur de Florida.
+            </p>
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-5 py-4 text-sm font-bold tracking-wide text-white">
+              CONOCER PROYECTO
+            </span>
+          </div>
+
         </Link>
       </article>
 
     </div>
   </div>
 </section>
+
 
 
       {/* SECCIÓN DE GUÍAS - Ubicada entre Propiedades y Nosotros */}
