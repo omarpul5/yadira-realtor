@@ -13,12 +13,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://yadiraportuondo.com"),
   title: "Yadira Portuondo | Bienes Raíces en Miami",
   description:
     "Abriendo puertas a tu mejor inversión en Miami y South Florida.",
+
+  icons: {
+    icon: [
+      {
+        url: "/yadira-favicon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/yadira-favicon.png",
+    apple: "/yadira-favicon.png",
+  },
+
   openGraph: {
     title: "Yadira Portuondo | Bienes Raíces en Miami",
     description:
@@ -36,6 +47,7 @@ export const metadata: Metadata = {
     locale: "es_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Yadira Portuondo | Bienes Raíces en Miami",
@@ -44,7 +56,6 @@ export const metadata: Metadata = {
     images: ["/og-yadira.png"],
   },
 };
-
 
 export default function RootLayout({
   children,
