@@ -271,6 +271,7 @@ useEffect(() => {
 
 
 
+
 {/* PROYECTOS DE INVERSIÓN */}
 <section id="projects" className="scroll-mt-24 bg-[#E2E8F0] px-5 py-12 md:px-6 md:pt-16 md:pb-28">
   <div className="mx-auto max-w-6xl">
@@ -297,7 +298,6 @@ useEffect(() => {
         <Link href="/proyectos/okan-tower" className="block">
 
           <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
-
             <img
               src="/proyectos/okan-tower/fachada.jpg"
               alt="Okan Tower, Downtown Miami"
@@ -376,7 +376,6 @@ useEffect(() => {
         <Link href="/proyectos/72-park" className="block">
 
           <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
-
             <img
               src="/proyectos/72-park/fachada.jpg"
               alt="72 Park, Miami Beach"
@@ -457,7 +456,6 @@ useEffect(() => {
         <Link href="/proyectos/natiivo-fort-lauderdale" className="block">
 
           <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
-
             <img
               src="/proyectos/natiivo-fort-lauderdale/fachada.jpg"
               alt="Natiivo Fort Lauderdale"
@@ -533,9 +531,97 @@ useEffect(() => {
         </Link>
       </article>
 
+      {/* NEXO RESIDENCES */}
+      {/* NEXO RESIDENCES */}
+<article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl lg:col-start-2">
+        <Link href="/proyectos/nexo-residences" className="block">
+
+          <div className="relative h-[310px] overflow-hidden sm:h-[360px] md:h-[420px]">
+            <img
+              src="/proyectos/nexo-residences/fachada.webp"
+              alt="NEXO Residences, North Miami Beach"
+              className="h-full w-full object-cover transition-transform duration-700 md:group-hover:scale-110"
+              loading="lazy"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F]/80 via-[#07101F]/10 to-[#07101F]/20" />
+
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-white/95 px-4 py-2.5 text-xs font-bold tracking-wide text-[#0284C7] shadow-lg md:px-5 md:py-3 md:text-sm">
+              NORTH MIAMI BEACH
+            </span>
+
+            {/* IDENTIDAD DEL PROYECTO Y FIRMA */}
+            <div className="absolute inset-0 flex items-center justify-center px-8 pb-4 transition-all duration-500 md:group-hover:scale-90 md:group-hover:opacity-0">
+              <div className="text-center">
+                <p className="text-5xl font-extralight tracking-[0.18em] text-white drop-shadow-lg md:text-6xl">
+                  NEXO
+                </p>
+                <p className="mt-2 text-sm font-medium tracking-[0.35em] text-white drop-shadow-lg md:text-base">
+                  RESIDENCES
+                </p>
+              </div>
+
+              <div className="absolute bottom-7 left-0 right-0 text-center md:bottom-8">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white drop-shadow-md md:text-sm md:tracking-[0.16em]">
+                  YADIRA PORTUONDO
+                </p>
+                <p className="mt-1 text-[8px] font-medium tracking-[0.2em] text-white/90 drop-shadow-md md:text-[9px] md:tracking-[0.25em]">
+                  REALTOR® | SOUTH FLORIDA
+                </p>
+              </div>
+            </div>
+
+            {/* INFORMACIÓN: SOLO ESCRITORIO */}
+            <div className="absolute inset-0 hidden flex-col justify-center bg-gradient-to-b from-[#07101F]/95 via-[#17263D]/95 to-[#07101F]/95 p-7 text-center opacity-0 transition-all duration-500 md:flex md:translate-y-6 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+
+              <p className="mb-4 text-sm font-bold tracking-[0.2em] text-[#C8A96B]">
+                PROYECTO DESTACADO
+              </p>
+
+              <h3 className="mb-5 text-3xl font-bold text-white">
+                NEXO Residences
+              </h3>
+
+              <p className="mb-8 text-base leading-relaxed text-gray-200">
+                Un concepto residencial contemporáneo que integra diseño,
+                residencias amuebladas y amenidades para disfrutar de
+                North Miami Beach.
+              </p>
+
+              <span className="inline-flex items-center justify-center rounded-xl bg-[#0284C7] px-6 py-4 text-sm font-bold tracking-wide text-white">
+                CONOCER PROYECTO
+              </span>
+            </div>
+          </div>
+
+          {/* INFORMACIÓN: SOLO CELULAR */}
+          <div className="bg-white p-6 md:hidden">
+            <p className="mb-2 text-xs font-bold tracking-[0.18em] text-[#C8A96B]">
+              PROYECTO DESTACADO
+            </p>
+
+            <h3 className="mb-3 text-2xl font-bold text-[#1E293B]">
+              NEXO Residences
+            </h3>
+
+            <p className="mb-5 text-base leading-relaxed text-gray-600">
+              Un concepto residencial contemporáneo que integra diseño,
+              residencias amuebladas y amenidades para disfrutar de
+              North Miami Beach.
+            </p>
+
+            <span className="inline-flex w-full items-center justify-center rounded-xl bg-[#0284C7] px-5 py-4 text-sm font-bold tracking-wide text-white">
+              CONOCER PROYECTO
+            </span>
+          </div>
+
+        </Link>
+      </article>
+
     </div>
   </div>
 </section>
+
 
 
 
